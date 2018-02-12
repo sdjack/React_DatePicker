@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// Sass variables.
+// -----------------------------------------------------------------------------
+
+$color-background: $color-white !default;
+$color-primary: $color-gray !default;
+$color-secondary: $color-blue !default;
+$color-accent: $color-green !default;
+
+$color-background-contrast: $color-black !default;
+$color-primary-contrast: $color-black !default;
+$color-secondary-contrast: $color-white !default;
+$color-accent-contrast: $color-white !default;
+
+$text-color: $color-shadow-4;
+$border: 1px solid $color-shadow-3;
+$input-size: 36px !default;
+$font-size: 14px !default;
+
+$transition-properties: height,box-shadow,color,background-color;
+
+$animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1) !default;
+$animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1) !default;
+$animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1) !default;
+$animation-curve-default: $animation-curve-fast-out-slow-in !default;

@@ -1,0 +1,249 @@
+/***
+ *    ██████╗  █████╗ ████████╗███████╗██████╗ ██╗ ██████╗██╗  ██╗███████╗██████╗
+ *    ██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██╔══██╗██║██╔════╝██║ ██╔╝██╔════╝██╔══██╗
+ *    ██║  ██║███████║   ██║   █████╗  ██████╔╝██║██║     █████╔╝ █████╗  ██████╔╝
+ *    ██║  ██║██╔══██║   ██║   ██╔══╝  ██╔═══╝ ██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗
+ *    ██████╔╝██║  ██║   ██║   ███████╗██║     ██║╚██████╗██║  ██╗███████╗██║  ██║
+ *    ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+ *
+ */
+// -----------------------------------------------------------------------------
+// Add Notes Here
+// -----------------------------------------------------------------------------
+.datepicker {
+  cursor: pointer;
+  padding: 0;
+  opacity: 1;
+
+  &.muted > .datepicker-text {
+    //background: none !important;
+    //background-color: transparent !important;
+    opacity: 0.5;
+  }
+}
+
+.datepicker-text {
+  opacity: 1;
+}
+
+.datepicker-toggle {
+  width: 100%;
+  height: 100%;
+  font-size: $font-size;
+  font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+  padding: 0;
+
+  & > input {
+    height: 100%;
+    width: 100%;
+    font-weight: 200 !important;
+  }
+
+  & > .fa-calendar {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+}
+
+.datepicker-expired {
+  color: #f00 !important;
+}
+
+.datepicker-range {
+  display: inline-block;
+  padding: 0;
+
+  & > .datepicker-toggle {
+    & > input {
+      text-align: center !important;
+    }
+  }
+}
+
+.datepicker-icon {
+  font-size: 26px !important;
+
+  @include text-align-center();
+}
+
+.datepicker-window {
+  overflow: hidden;
+  border: $border;
+  width: auto !important;
+}
+
+.datepicker-clear {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 22px !important;
+
+  @include text-align-center();
+}
+
+.datepicker-table {
+  position: relative;
+  width: 330px;
+  height: 272px;
+  border: 1px solid rgba(0,0,0,0.22);
+  border-collapse: collapse;
+  white-space: nowrap;
+  line-height: 20px;
+  background: $color-background;
+  font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+  font-size: 12px !important;
+}
+
+.datepicker-control-cell,
+.datepicker-header-cell,
+.datepicker-year-cell,
+.datepicker-month-cell,
+.datepicker-foot-cell {
+  padding: 0 !important;
+  background: $color-shadow-4;
+
+  @include text-align-center();
+
+  &:hover,
+  &:focus {
+    background: $color-shadow-5;
+  }
+}
+
+.datepicker-weekday-cell,
+.datepicker-day-cell {
+  padding: 2px 0 !important;
+
+  @include text-align-center();
+}
+
+.datepicker-control-cell,
+.datepicker-header-cell,
+.datepicker-foot-cell {
+  height: 32px !important;
+}
+
+.datepicker-year-cell {
+  width: 25%;
+}
+
+.datepicker-month-cell {
+  width: 33%;
+}
+
+.datepicker-weekday-cell {
+  min-height: 18px;
+  background: $color-shadow-2;
+  box-shadow: inset -1px -1px 1px $color-shadow-3;
+}
+
+.datepicker-day-cell {
+  width: 50px;
+  height: 46px;
+  background: $color-background;
+  box-shadow: inset -1px -1px 1px $color-shadow-1;
+
+  &:hover,
+  &:focus {
+    background: $text-color;
+  }
+
+  &.datepicker-day-active {
+    background: $color-accent;
+  }
+}
+
+.datepicker-cell-disabled {
+  background: $color-shadow-3;
+
+  &.datepicker-day-active {
+    background: $color-accent;
+  }
+
+  &:hover,
+  &:focus {
+    background: $color-shadow-3;
+  }
+}
+
+.datepicker-bordered-b {
+  box-shadow: inset 0 -1px 1px $color-shadow-1;
+}
+
+.datepicker-bordered-r {
+  box-shadow: inset -1px 0 1px $color-shadow-1;
+}
+
+.datepicker-bordered-b-r {
+  box-shadow: inset -1px -1px 1px $color-shadow-1;
+}
+
+.datepicker-control,
+.datepicker-day,
+.datepicker-weekday,
+.datepicker-foot,
+.datepicker-clear {
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: none !important;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 !important;
+}
+
+.datepicker-control,
+.datepicker-day,
+.datepicker-foot {
+  font-size: 14px !important;
+}
+
+.datepicker-control,
+.datepicker-year,
+.datepicker-month,
+.datepicker-foot {
+  color: $color-secondary-contrast;
+  background: transparent !important;
+  border: none !important;
+  line-height: 32px !important;
+
+  @include text-align-center();
+}
+
+.datepicker-control,
+.datepicker-year,
+.datepicker-month,
+.datepicker-weekday {
+  padding: 0 !important;
+  text-transform: uppercase;
+}
+
+.datepicker-weekday {
+  line-height: 16px !important;
+  letter-spacing: 0;
+  color: $color-shadow-4;
+  font-size: 10px !important;
+}
+
+.datepicker-day {
+  padding: 0 !important;
+  line-height: 40px;
+  color: $text-color;
+  background: transparent !important;
+  border: none !important;
+
+  @include text-align-center();
+
+  &:hover,
+  &:focus,
+  &.datepicker-day-active {
+    color: $color-accent-contrast;
+  }
+}
+
+.datepicker-disabled {
+  opacity: 0.5;
+}
+
+.datepicker-foot {
+  padding: 0 !important;
+}

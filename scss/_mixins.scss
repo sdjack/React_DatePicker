@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// Sass mixins.
+// -----------------------------------------------------------------------------
+
+@mixin text-align-center() {
+  text-align: -webkit-center;
+  text-align: center;
+  vertical-align: -webkit-baseline-middle;
+  vertical-align: middle;
+  align-items: center;
+  align-content: center;
+}
+
+@mixin text-align-left() {
+  text-align: -webkit-left;
+  text-align: left;
+  vertical-align: -webkit-baseline-middle;
+  vertical-align: middle;
+  align-items: start;
+  align-content: start;
+}
+
+@mixin text-align-right() {
+  text-align: -webkit-right;
+  text-align: right;
+  vertical-align: -webkit-baseline-middle;
+  vertical-align: middle;
+  align-items: end;
+  align-content: end;
+}
+
+@mixin shadow-removed() {
+    box-shadow: none;
+}
+
+@mixin shadow-basic() {
+  box-shadow: 1px 2px 5px 1px rgba(0,0,0,.07), 
+              1px 2px 8px -3px rgba(0,0,0,.3)
+}
+
+@mixin animate-default($duration:0.2s) {
+  transition-duration: $duration;
+  transition-timing-function: $animation-curve-default;
+}

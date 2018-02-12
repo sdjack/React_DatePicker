@@ -1,0 +1,58 @@
+{
+  "name": "React_DatePicker",
+  "version": "1.0.0",
+  "description": "React_DatePicker React component",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "start": "nwb serve-react-demo",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "intl": "^1.2.5",
+    "intl-locales-supported": "^1.0.0",
+    "keycode": "^2.1.9",
+    "prop-types": "^15.6.0",
+    "prop-types-extra": "^1.0.1"
+  },
+  "peerDependencies": {
+    "react": "15.x"
+  },
+  "devDependencies": {
+    "nwb": "0.19.x",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "del": "^3.0.0",
+    "dom-helpers": "^3.3.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-css-inline-images": "^0.1.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-header": "^1.8.9",
+    "gulp-if": "^2.0.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "run-sequence": "^1.0.0",
+    "uncontrollable": "^4.1.0"
+  },
+  "author": "",
+  "homepage": "",
+  "license": "MIT",
+  "repository": "",
+  "keywords": [
+    "react-component"
+  ]
+}

@@ -1,0 +1,88 @@
+/***
+ *    ██████╗ ██████╗  ██████╗ ██████╗ ██████╗  ██████╗ ██╗    ██╗███╗   ██╗
+ *    ██╔══██╗██╔══██╗██╔═══██╗██╔══██╗██╔══██╗██╔═══██╗██║    ██║████╗  ██║
+ *    ██║  ██║██████╔╝██║   ██║██████╔╝██║  ██║██║   ██║██║ █╗ ██║██╔██╗ ██║
+ *    ██║  ██║██╔══██╗██║   ██║██╔═══╝ ██║  ██║██║   ██║██║███╗██║██║╚██╗██║
+ *    ██████╔╝██║  ██║╚██████╔╝██║     ██████╔╝╚██████╔╝╚███╔███╔╝██║ ╚████║
+ *    ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═════╝  ╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═══╝
+ *
+ */
+// -----------------------------------------------------------------------------
+// Add Notes Here
+// -----------------------------------------------------------------------------
+.dropdown {
+    display: inline-block;
+    position: relative;
+    cursor: pointer !important;
+    transition-property: $transition-properties;
+    @include animate-default(0.2s);
+
+    &:hover, &:focus, &.open {
+        & > .show-on-hover {
+            display: block;
+        }
+    }
+
+    &.open {
+        & > .dropdown-content {
+            height: auto !important;
+            max-height: 332px !important;
+            overflow-y: auto !important;
+            border: $border;
+            @include shadow-basic();
+        }
+    }
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: white;
+    border: none;
+    min-width: 100px;
+    list-style: none;
+    height: 0;
+    overflow: hidden;
+    z-index: 69;
+
+    @include shadow-removed();
+    @include animate-default(0.2s);
+    transition-property: height, border-shadow;
+}
+
+.dropdown-item,
+.dropdown-option {
+    display: block;
+    width: 100%;
+    height: $input-size;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-indent: 12px;
+    border-width: 0 0 1px 0 !important; 
+    border-style: solid;
+    border-color: $color-shadow-0 $color-shadow-0 $color-shadow-3 $color-shadow-0 !important;
+    @include text-align-left();
+
+    & > strong {
+        font-weight: 700 !important;
+    }
+
+    &:hover, &:focus, &.dropdown-item-selected, &.dropdown-option-selected {
+        background-color: $color-shadow-3;
+    }
+
+    &.disabled {
+        &:hover, &:focus, &.dropdown-item-selected, &.dropdown-option-selected {
+          background-color: transparent !important;
+        }
+    }
+}
+
+.dropdown-active {
+    display: block;
+}
