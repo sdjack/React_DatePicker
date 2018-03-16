@@ -2,9 +2,20 @@
 
 ---
 
-[![Travis][https://img.shields.io/travis/user/repo/master.png?style=flat-square]][https://travis-ci.org/user/repo]
+[![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
+
+Describe site code here.
+
+[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
+[build]: https://travis-ci.org/user/repo
+
+[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
+[npm]: https://www.npmjs.org/package/npm-package
+
+[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
+[coveralls]: https://coveralls.io/github/user/repo
 
 ---
 
@@ -38,11 +49,4 @@ Fabricator builds both a static documentation site and optimized CSS and JS tool
 
 The build artifacts output to the `dist` directory. This can be deployed to any static hosting environment - no language runtime or database is required.
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
